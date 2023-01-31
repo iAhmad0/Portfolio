@@ -1,0 +1,270 @@
+/* Framework */
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.justifyBet {
+  justify-content: space-between;
+}
+
+.rectanglePercentage :after {
+  height: 100%;
+  padding-right: 5px;
+  color: white;
+  background-color: var(--skyBlue);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 0px;
+}
+/* ------------------------- */
+
+
+/* Page Styling */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0 200px;
+
+  /* Main Colors*/
+  --lightGrey: #f6f6f6;
+  --skyBlue: #03a9f4;
+  --grey: #757575;
+  --lightRed: #b33939;
+  --regularBlue: #227093;
+  --regularGreen: #218c74;
+  --black: #333333;
+  --darkRegularBlue: #1ba8f2;
+
+  /* Padding */
+  --padding110: 0px 110px;
+  --padding100: 20px 100px;
+  --paddingTopBottom: 50px;
+}
+/* ------------------------- */
+
+
+/* Navbar Styling */
+nav {
+  align-items: center;
+  padding: var(--padding110);
+}
+
+li {
+  list-style: none;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+nav span {
+  font-weight: bold;
+  font-size: 18px;
+}
+/* ------------------------- */
+
+
+/* Section styling*/
+.container section:nth-of-type(2n+1) {
+  background-color: var(--lightGrey);
+}
+
+section  {
+  padding: var(--padding100);
+}
+
+
+/* First Section */
+#first {
+  text-align: center;
+}
+
+#first p:first-child {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#first span {
+  color: var(--skyBlue);
+}
+
+#first p {
+  font-size: 14px;
+  line-height: 24px;
+}
+/* ------------------------- */
+
+
+/* Second Section */
+#second {
+  margin-top: 15px;
+}
+
+#second div {
+  width: calc(100% / 3);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+#second img{
+  width: 60px;
+  height: 60px;
+}
+
+#second div p:nth-of-type(1) {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#second div p:nth-of-type(2) {
+  color: var(--grey);
+  font-size: 12px;
+  margin-top: 10px;
+}
+/* ------------------------- */
+
+
+/* Third Section*/
+#third {
+  padding-top: var(--paddingTopBottom);
+  padding-bottom: var(--paddingTopBottom);
+}
+
+#third img {
+  width: 350px;
+  height: 200px;
+}
+
+#third div {
+  margin-left: 30px;
+}
+
+#third h3 {
+  font-size: 22px;
+  margin-bottom: 0px;
+}
+
+#third div p {
+  width: 490px;
+  font-size: 12px;
+  line-height: 1.7;
+}
+/* ------------------------- */
+
+
+/* Fourth Section*/
+#fourth {
+  padding-top: var(--paddingTopBottom);
+  padding-bottom: var(--paddingTopBottom);
+}
+
+#fourth div {
+  width: calc((100% - 30px) / 3);
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  padding: 20px 0 15px;
+}
+
+#fourth div:nth-of-type(1) {
+  background-color: var(--lightRed);
+}
+
+#fourth div:nth-of-type(2) {
+  background-color: var(--regularBlue);
+}
+
+#fourth div:nth-of-type(3) {
+  background-color: var(--regularGreen);
+}
+
+#fourth div span {
+  font-size: 40px;
+  font-weight: bold;
+}
+/* ------------------------- */
+
+
+/* Fifth Section*/
+#fifth {
+  padding-top: 40px;
+  padding-bottom: var(--paddingTopBottom);
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+}
+
+#fifth h3 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+
+#fifth div {
+  align-items: center;
+  width: 100%;
+}
+
+#fifth div div {
+  height: 35px;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+
+#fifth div div div {
+  margin: 10px;
+  width: calc(100% - 100px);
+  background-color: white;
+  position: relative;
+  font-size: 12px;
+}
+
+#fifth div div:nth-of-type(1) div:after {
+  content: "60%";
+  width: 60%;
+}
+
+#fifth div div:nth-of-type(2) div:after {
+  content: "70%";
+  width: 70%;
+}
+
+#fifth div div:nth-of-type(3) div:after {
+  content: "80%";
+  width: 80%;
+}
+
+#fifth div div:nth-of-type(4) div:after {
+  content: "65%";
+  width: 65%;
+}
+
+#fifth div div:nth-of-type(5) div:after {
+  content: "90%";
+  width: 90%;
+}
+/* ------------------------- */
+
+
+/* Footer Styling*/
+footer {
+  height: 40px;
+  background-color: var(--black);
+  color: white;
+  font-size: 12px;
+  padding: var(--padding110);
+  align-items: center;
+}
+
+footer p span {
+  color: var(--darkRegularBlue);
+}
+/* ------------------------- */

@@ -1,0 +1,127 @@
+body {
+  --priceColor: #316978;
+  --discountColor: #e84602;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+  color: white;
+  background-color: var(--priceColor);
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px 15px 10px 20px;
+}
+
+.products-container {
+  width: 900px;
+  margin-top: 25px;
+  margin-left: 30px;
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product {
+  box-sizing: border-box;
+  min-height: 250px;
+  max-height: 300px;
+  padding: 1px;
+  text-align: center;
+  border: #dddddd solid 5px;
+  position: relative;
+}
+
+.product.sale::before {
+  content: "Sale!";
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 12px;
+  background-color: #e84602;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  top: -10px;
+  left: -15px;
+}
+
+.product img {
+  width: 200px;
+  height: 210px;
+}
+
+.product p {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.product p:first-of-type {
+  color: #4c515e;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--priceColor);
+  margin-top: 0px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.price::before {
+  content: "";
+  width: calc((200px - 100%) / 2 - 20px);
+  height: 2px;
+  background-color: #dddddd;
+  position: absolute;
+  top: 8px;
+  right: 125%;
+}
+
+.price::after {
+  content: "";
+  width: calc((200px - 100%) / 2 - 20px);
+  height: 2px;
+  background-color: #dddddd;
+  position: absolute;
+  top: 8px;
+  left: 125%;
+}
+
+.price del {
+  font-size: 12px;
+  font-weight: normal;
+  color: #949db5;
+  margin-right: 5px;
+}
+
+.price.discount::before {
+  content: "";
+  width: calc((200px - 100%) / 2 - 20px);
+  height: 2px;
+  background-color: #dddddd;
+  position: absolute;
+  top: 8px;
+  right: 110%;
+}
+
+.price.discount::after {
+  content: "";
+  width: calc((200px - 100%) / 2 - 20px);
+  height: 2px;
+  background-color: #dddddd;
+  position: absolute;
+  top: 8px;
+  left: 110%;
+}
+
+.price #discountedPrice {
+  color: var(--discountColor);
+}

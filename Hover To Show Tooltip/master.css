@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 200px;
+}
+
+span {
+  color: white;
+  background-color: red;
+  padding: 15px 10px;
+  margin: 200px;
+  position: relative;
+}
+
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+span:hover::before {
+  content: "This Is Tooltip Content";
+  position: absolute;
+  color: white;
+  background-color: black;
+  display: block;
+  width: 120px;
+  padding: 10px 25px;
+  top: -45px;
+  left: -27.5px;
+  font-size: 12px;
+  animation: smooth 0.3s linear 0s forwards;
+  opacity: 0;
+}
+
+span:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  top: -12px;
+  left: 53.5px;
+  animation: smooth 0.3s linear 0s forwards;
+  opacity: 1;
+}
