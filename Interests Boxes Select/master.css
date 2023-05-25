@@ -1,0 +1,130 @@
+:root {
+  --main-purple-color: #5c48f1;
+  --elements-background-color: #eeecfd;
+  --element-border-color: #e0e0e1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  background-color: #fafafa;
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+}
+
+#title {
+  color: var(--main-purple-color);
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--elements-background-color);
+  padding: 25px;
+  text-align: center;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 190px);
+  gap: 20px;
+}
+
+.checkBox {
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.checkBox:hover .newCheckBox {
+  border-color: var(--main-purple-color);
+}
+
+.checkBox:hover .newCheckBox::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: var(--main-purple-color);
+  opacity: 0.3;
+  border-radius: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.checkBox:hover input[type = checkbox]:checked ~ .newCheckBox::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: var(--main-purple-color);
+  opacity: 1;
+  border-radius: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.check {
+  width: 100%;
+  padding: 35px 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: var(--element-border-color) solid 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.check img {
+  width: 100px;
+  height: 100px;
+}
+
+.check span {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.checkBox input[type = checkbox] {
+  visibility: hidden;
+  width: 28px;
+  height: 28px;
+  margin-top: 7px;
+  margin-left: 6px;
+}
+
+.newCheckBox {
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: #bdbdbd solid 2px;
+  margin-top: 7px;
+  margin-left: 6px;
+}
+
+.checkBox input[type = checkbox]:checked ~ .newCheckBox {
+  border-color: var(--main-purple-color);
+}
+
+.checkBox input[type = checkbox]:checked ~ .newCheckBox::after {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: var(--main-purple-color);
+  border-radius: 5px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.checkBox input[type = checkbox]:checked ~ div {
+  border-color: var(--main-purple-color);
+  background-color: var(--elements-background-color);
+}
